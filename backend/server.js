@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -9,11 +8,6 @@ const PORT = process.env.PORT || 3000;
 
 
 connectDB();
-
-app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:8000',
-    credentials: true
-}));
 
 app.use(cors());
 app.use(express.json());
